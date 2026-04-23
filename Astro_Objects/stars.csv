@@ -1,0 +1,12 @@
+name,type,spectral_class,mass,radius,temperature,age,apparent_magnitude,distance
+Sun,Main Sequence,G2V,1,1,5778,4.6,4.83,4.848e-06
+Betelgeuse,Red Supergiant,M2Iab,11.6,887,3500,8,0.42,0.197
+Proxima Centauri,Red Dwarf,M5.5Ve,0.122,0.1542,3042,4.85,11.13,0.001301
+Wolf 359,Red Dwarf,M6.5Ve,0.11,0.144,2749,0.2,13.5,2.4e-06
+YZ Ceti,Red Dwarf,M4.Ve,0.13,0.168,3151,5,12.1,3.7e-06
+Epsilon Eridani,Orange Star,K2.V,0.82,0.74,5183,0.5,3.7,3.2e-06
+Pollux,Red Giant,K0IIIb,1.91,9.06,4938,0.724,1.1,1.04e-05
+Gliese 341,Red Dwarf,M1V,0.522,0.53,3745,4,9.5,1.04e-05
+Tau Ceti,Yellow Star,G8 V,0.69,0.79,5320,10,3.5,3.7e-06
+Barnard's,Red Dwarf,M4,0.162,0.187,3195,10,9.51,1.82e-06
+Altair,White-Blue star,A7 V,1.79,1.83,7377,1.2,0.8,5.1e-06

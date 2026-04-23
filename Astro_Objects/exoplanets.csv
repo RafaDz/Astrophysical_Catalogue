@@ -1,0 +1,11 @@
+name,type,host_star,mass,radius,semi_major_axis,eccentricity
+Proxima b,Terrestrial,Proxima Centauri,1.27,1.1,0.0485,0.1
+Proxima c,Super-Earth,Proxima Centauri,7,2.7,1.49,0.04
+Proxima d,Sub-Earth,Proxima Centauri,0.26,0.75,0.029,0.05
+Epsilon Eridani b,Gas Giant,Epsilon Eridani,209.75,14,3.53,0.07
+Tau Ceti g,Super-Earth,Tau Ceti,1.75,1.18,0.133,0.06
+Tau Ceti f,Super-Earth,Tau Ceti,3.93,1.81,1.334,0.16
+Tau Ceti h,Super-Earth,Tau Ceti,1.83,1.19,0.243,0.23
+Barnard b,Terrestrial,Barnard's,0.193,0.637,0.0381,0.04
+Barnard c,Terrestrial,Barnard's,0.335,0.743,0.0274,0.08
+Kepler-1660 AB b,Gas Giant,N/A,1586,12.89,0.8,0.06
