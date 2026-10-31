@@ -24,7 +24,7 @@ class Star : public CelestialObject {  // Class representing a star, derived fro
     double temperature; // Surface temperature of the star in Kelvin
     double age; // Age of the star in billions of years
     double apparent_magnitude; // Apparent magnitude of the star
-    double distance; // Distance to the star in parsecs
+    double distance; // Distance to the star in megaparsecs (Mpc), same unit as galaxies
   
   public:
     // Constructor

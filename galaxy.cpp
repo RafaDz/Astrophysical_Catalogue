@@ -17,7 +17,6 @@ int Galaxy::counter = 0; // Initialize static counter to 0
 Galaxy::Galaxy(std::string name, std::string constellation, double distance, double apparent_magnitude, double redshift)
   : CelestialObject(name, "Galaxy"), constellation(constellation), distance(distance), apparent_magnitude(apparent_magnitude), redshift(redshift) 
   {
-    ++counter; // Increment the counter for each new galaxy created
 
     // Validate inputs
     if(name.empty()) // Check if name is empty
@@ -44,6 +43,8 @@ Galaxy::Galaxy(std::string name, std::string constellation, double distance, dou
     {  
       throw std::invalid_argument("Redshift cannot be negative.");
     }
+
+    ++counter; // Count the object only after validation, so a rejected object is not counted
   }
 
 // Destructor

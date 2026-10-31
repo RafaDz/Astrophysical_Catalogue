@@ -23,7 +23,7 @@
 // Write CSV header for stars
 void write_star_csv_header(std::ostream& out)
 {
-  out<<"object_type,name,type,spectral_class,mass,radius,temperature,age,apparent_magnitude,distance,luminosity,gravity\n";
+  out<<"object_type,name,type,spectral_class,mass,radius,temperature,age,apparent_magnitude,distance,absolute_magnitude,luminosity,gravity\n";
 }
 
 // Write a single star in TXT format
