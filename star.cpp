@@ -38,7 +38,6 @@ Star::Star(std::string name, std::string type, std::string spectral_class, doubl
   : CelestialObject(name, "Star"), type(type), spectral_class(spectral_class), mass(mass), radius(radius), 
           temperature(temperature), age(age), apparent_magnitude(apparent_magnitude), distance(distance)
 {
-  ++counter; // Increment the counter for each new star created
 
   if(name.empty() || type.empty() || spectral_class.empty())
   {  
@@ -68,6 +67,8 @@ Star::Star(std::string name, std::string type, std::string spectral_class, doubl
   {
     throw std::invalid_argument("Distance cannot be negative.");
   }
+
+  ++counter; // Count the object only after validation, so a rejected object is not counted
 }
 
 // Destructor
@@ -190,7 +191,7 @@ void Star::print() const
     <<std::setw(30)<<"Temperature [K]:"<<temperature<<"\n"
     <<std::setw(30)<<"Age [Gyr]:"<<age<<"\n"
     <<std::setw(30)<<"Apparent Magnitude:"<<apparent_magnitude<<"\n"
-    <<std::setw(30)<<"Distance [pc]:"<<distance<<"\n"
+    <<std::setw(30)<<"Distance [Mpc]:"<<distance<<"\n"
     <<std::setw(30)<<"Absolute Magnitude:"<<absolute_magnitude()<<"\n"
     <<std::setw(30)<<"Luminosity [L_Sun]:"<<luminosity()<<"\n"
     <<std::setw(30)<<"Surface Gravity [m/s^2]:"<<gravitational_strength()<<"\n"

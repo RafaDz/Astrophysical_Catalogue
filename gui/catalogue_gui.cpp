@@ -167,7 +167,7 @@ CatalogueApp::CatalogueApp()
     number_column<Star>("Temperature [K]", [](const Star& s) { return s.get_temperature(); }),
     number_column<Star>("Age [Gyr]", [](const Star& s) { return s.get_age(); }),
     number_column<Star>("Apparent mag", [](const Star& s) { return s.get_apparent_magnitude(); }),
-    number_column<Star>("Distance [pc]", [](const Star& s) { return s.get_distance(); }),
+    number_column<Star>("Distance [Mpc]", [](const Star& s) { return s.get_distance(); }),
     number_column<Star>("Luminosity [L_Sun]", [](const Star& s) { return s.luminosity(); }),
     number_column<Star>("Absolute mag", [](const Star& s) { return s.absolute_magnitude(); }),
     number_column<Star>("Surface gravity [m/s^2]", [](const Star& s) { return s.gravitational_strength(); }),
@@ -893,7 +893,7 @@ void CatalogueApp::draw_add_popup()
     ImGui::InputDouble("Temperature [K]", &f.s_temperature, 0.0, 0.0, "%g");
     ImGui::InputDouble("Age [Gyr]", &f.s_age, 0.0, 0.0, "%g");
     ImGui::InputDouble("Apparent magnitude", &f.s_magnitude, 0.0, 0.0, "%g");
-    ImGui::InputDouble("Distance [pc]", &f.s_distance, 0.0, 0.0, "%g");
+    ImGui::InputDouble("Distance [Mpc]", &f.s_distance, 0.0, 0.0, "%g");
   }
   else
   {

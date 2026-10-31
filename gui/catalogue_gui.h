@@ -117,7 +117,7 @@ class CatalogueApp
       // Star
       char s_type[64] = "Main Sequence";
       char s_spectral[16] = "G2V";
-      double s_mass = 1.0, s_radius = 1.0, s_temperature = 5778.0, s_age = 4.6, s_magnitude = 5.0, s_distance = 10.0;
+      double s_mass = 1.0, s_radius = 1.0, s_temperature = 5778.0, s_age = 4.6, s_magnitude = 5.0, s_distance = 1.0e-5;
       // Exoplanet
       char e_type[64] = "Terrestrial";
       int e_host = 0;

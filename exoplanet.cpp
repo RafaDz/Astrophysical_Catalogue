@@ -31,7 +31,6 @@ Exoplanet::Exoplanet(std::string name, std::string type, std::shared_ptr<Star> h
   double semi_major_axis, double eccentricity) : CelestialObject(name, "Exoplanet"), type(type),
   planet_mass(planet_mass), planet_radius(planet_radius), semi_major_axis(semi_major_axis), eccentricity(eccentricity), host_star_ptr(std::move(host_star_ptr))
 {
-  ++counter;
 
   // Validate inputs
   if(planet_mass <= 0.0) 
@@ -50,6 +49,8 @@ Exoplanet::Exoplanet(std::string name, std::string type, std::shared_ptr<Star> h
   {
     throw std::invalid_argument("Eccentricity must be in [0, 1).");
   }
+
+  ++counter; // Count the object only after validation, so a rejected object is not counted
 }
 
 // Destructor
