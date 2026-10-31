@@ -1,0 +1,6 @@
+build/
+astro_catalogue_gui.ini
+imgui.ini
+/astro_catalogue
+/astro_catalogue_gui
+/astro_catalogue_gui.exe

@@ -42,6 +42,38 @@ Then to run the program:
 ./astro_catalogue.exe
 ```
 
+## === Graphical interface (Dear ImGui): ===
+Alongside the terminal menu there is now a windowed version, `astro_catalogue_gui`, built with [Dear ImGui](https://github.com/ocornut/imgui) + GLFW + OpenGL 3.
+It uses exactly the same classes, CSV files and export formats as the terminal program.
+
+![GUI screenshot](docs/gui_screenshot.png)
+
+What it offers:
+- Sidebar with the catalogue summary, quick "Add" buttons and a saved/unsaved indicator.
+- One tab per object type with a searchable table showing all stored and calculated properties.
+  Click a column header to sort (again to reverse, a third time to restore the file order). Sorting only changes the view, not the CSV files.
+- Click a row to see the object's full details, export it (txt/csv), compare it with another object, or remove it.
+- "Compare" tab: two objects of the same type side by side, with the ratio of each numeric property.
+- "Export list..." exports the table exactly as shown (current sort and search filter) to the 'Exports' folder.
+- Add-object forms with validation (the class constructors' error messages are shown in the dialog).
+- Save with the button, File > Save or Ctrl+S. You are asked before quitting with unsaved changes.
+
+### Building (both programs) with CMake
+Requires CMake >= 3.16, a C++17 compiler and an internet connection the first time (Dear ImGui and GLFW are downloaded automatically).
+
+```bash
+cmake -S . -B build
+cmake --build build --config Release
+```
+
+This produces `astro_catalogue` (terminal) and `astro_catalogue_gui` (window) in the project folder, next to 'Astro_Objects'.
+On Windows they are `.exe` files; with MinGW add `-G "MinGW Makefiles"` to the first command.
+On Linux you need the X11/OpenGL development packages, e.g. on Ubuntu:
+`sudo apt install libgl1-mesa-dev libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev`.
+To build only the terminal version: `cmake -S . -B build -DASTRO_BUILD_GUI=OFF`.
+
+The single `g++` command above still works for the terminal version.
+
 ## === Tips: ===
 - Searching is case-sensitive, but if you make a mistake, the full list of available objects will be displayed so you can simply copy the desired name.
 - Comparing two objects let you enter both names first and then in case of an error in either of objects you will see the error message and full list of available object will be displayed.
